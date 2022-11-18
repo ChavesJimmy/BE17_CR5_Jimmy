@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 18. Nov 2022 um 11:23
+-- Erstellungszeit: 18. Nov 2022 um 23:06
 -- Server-Version: 10.4.25-MariaDB
 -- PHP-Version: 8.1.10
 
@@ -34,7 +34,7 @@ CREATE TABLE `animals` (
   `age` int(11) DEFAULT NULL,
   `vaccinated` enum('yes','no') DEFAULT NULL,
   `breed` varchar(35) DEFAULT NULL,
-  `status` enum('adopted','available') DEFAULT NULL,
+  `status` enum('adopted','available') DEFAULT 'available',
   `name` varchar(35) NOT NULL,
   `image` varchar(250) NOT NULL,
   `address` varchar(250) NOT NULL
@@ -49,12 +49,12 @@ INSERT INTO `animals` (`animal_id`, `description`, `size`, `age`, `vaccinated`, 
 (2, 'This cat love to play hide and seek', 40, 9, 'yes', 'cat', 'available', 'Shadow', 'https://cdn.pixabay.com/photo/2015/03/27/13/16/maine-coon-694730__480.jpg', 'wien 1180'),
 (3, 'Love to watch TV while eating', 12, 2, 'yes', 'edgehog', 'available', 'Sonic', 'https://cdn.pixabay.com/photo/2016/02/22/10/06/hedgehog-1215140__480.jpg', 'wienerwald 87/3'),
 (4, 'A real entertainer for the whole family', 22, 12, 'yes', 'parrot', 'available', 'Samba', 'https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194__480.jpg', 'Vogelhaus, tiergarten 1140 wien'),
-(5, 'Love to play Rock n roll, but he is addicted to smoking', 82, 15, 'yes', 'monkey', 'available', 'Gorillaz', 'https://cdn.pixabay.com/photo/2018/06/30/09/29/monkey-3507317__480.jpg', 'Stadtpark 1020 Wien'),
+(5, 'Love to play Rock n roll, but he is addicted to smoking', 82, 18, 'yes', 'monkey', 'available', 'Gorillaz', 'https://cdn.pixabay.com/photo/2018/06/30/09/29/monkey-3507317__480.jpg', 'Stadtpark 1020 Wien'),
 (6, 'Really protective and smart, she is better than any alarm system', 36, 11, 'yes', 'owl', 'available', 'Holy', 'https://cdn.pixabay.com/photo/2018/09/02/15/34/owl-3649048__480.jpg', 'Wien 1230'),
 (7, 'With him you will not need a car anymore, he loves bringing eople everywhere', 230, 7, 'yes', 'horse', 'available', 'Pegasus', 'https://cdn.pixabay.com/photo/2016/11/06/22/58/horse-1804425__480.jpg', 'Mödling horsestraße 3'),
-(8, 'really into fashion, do not mess with his hair', 190, 6, 'yes', 'cow', 'available', 'Justin', 'https://cdn.pixabay.com/photo/2014/08/30/18/19/cow-431729__480.jpg', 'Bauernstraße 11'),
-(9, 'A show on your aquarium', 13, 2, 'no', 'jellyfish', 'available', 'the Jellys', 'https://cdn.pixabay.com/photo/2020/01/12/19/55/jellyfish-4760924__480.jpg', 'Seaquariumstraße 88'),
-(10, 'Nedd someone to play with in your swimming pool, he is here for you', 140, 6, 'yes', 'shark', 'available', 'Sharko', 'https://cdn.pixabay.com/photo/2018/03/04/09/41/shark-3197585__480.jpg', 'Donaukanal 33');
+(8, 'really into fashion, do not mess with his hair', 190, 6, 'yes', 'cow', 'adopted', 'Justin', 'https://cdn.pixabay.com/photo/2014/08/30/18/19/cow-431729__480.jpg', 'Bauernstraße 11'),
+(9, 'A show on your aquarium', 13, 2, 'no', 'jellyfish', 'adopted', 'the Jellys', 'https://cdn.pixabay.com/photo/2020/01/12/19/55/jellyfish-4760924__480.jpg', 'Seaquariumstraße 88'),
+(19, 'Can not so much do.', 12, 34, 'yes', 'Worm', 'available', 'Coco', 'https://cdn.pixabay.com/photo/2013/10/29/15/19/letter-202404__480.jpg', 'Schonbrunn');
 
 -- --------------------------------------------------------
 
@@ -66,7 +66,7 @@ CREATE TABLE `pet_adoption` (
   `adopt_id` int(11) NOT NULL,
   `fk_user_id` int(11) DEFAULT NULL,
   `fk_animal_id` int(11) DEFAULT NULL,
-  `adoption_date` date DEFAULT NULL
+  `adoption_date` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -84,7 +84,7 @@ CREATE TABLE `users` (
   `address` varchar(150) DEFAULT NULL,
   `picture` varchar(250) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `status` enum('user','administrator') DEFAULT NULL
+  `status` enum('user','admin') DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -119,19 +119,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `animals`
 --
 ALTER TABLE `animals`
-  MODIFY `animal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `animal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT für Tabelle `pet_adoption`
 --
 ALTER TABLE `pet_adoption`
-  MODIFY `adopt_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `adopt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints der exportierten Tabellen

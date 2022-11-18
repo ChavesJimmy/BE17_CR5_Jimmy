@@ -28,11 +28,11 @@ if ($_POST) {
     if (mysqli_query($connect, $sql) === true) {
         $class = "alert alert-success";
         $message = "The pet was successfully updated";
-        header("refresh:3;url=../updatePet.php?id={$id}");
+        header("refresh:3;url=../Admin_Dash/updatePet.php?id={$id}");
     } else {
         $class = "alert alert-danger";
         $message = "Error while updating pet : <br>" . $connect->error;
-        header("refresh:3;url=../updatePet.php?id={$id}");
+        header("refresh:3;url=../Admin_Dash/updatePet.php?id={$id}");
     }
     mysqli_close($connect);
 } else {

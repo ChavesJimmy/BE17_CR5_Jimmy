@@ -8,7 +8,7 @@ if (isset($_SESSION['user']) != "") {
     exit;
 }
 if (isset($_SESSION['admin']) != "") {
-    header("Location: dashboard.php");
+    header("Location: Admin_Dash/dashboard.php");
 }
 
 $error = false;

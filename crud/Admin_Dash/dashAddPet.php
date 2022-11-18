@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once './components/db_connect.php';
+require_once '../components/db_connect.php';
 
 if (isset($_SESSION['user']) != "") {
-    header("Location: ../home.php");
+    header("Location: ../User_Home/home.php");
     exit;
 }
 
@@ -23,8 +23,8 @@ $result = mysqli_query($connect, "SELECT * FROM animals");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require_once 'components/boot.php' ?>
-    <link rel="stylesheet" href="./style/styleDash.css">
+    <?php require_once '../components/boot.php' ?>
+    <link rel="stylesheet" href="../style/styleDash.css">
     <title>Adm-Dashboard-AddPet</title>
     <style>
         fieldset {
@@ -38,7 +38,7 @@ $result = mysqli_query($connect, "SELECT * FROM animals");
 <body>
     <fieldset>
         <legend class='h2'>Add a Pet</legend>
-        <form action="actions/a_NewPet.php" method="post" enctype="multipart/form-data">
+        <form action="../actions/a_NewPet.php" method="post" enctype="multipart/form-data">
             <table class='table myTable'>
                 <tr>
                     <th>Name</th>
@@ -89,7 +89,7 @@ $result = mysqli_query($connect, "SELECT * FROM animals");
                 </tr>
             </table>
         </form>
-        <td><a href="index.php"><button class='btn btn-warning d-block m-auto' type="button">Home</button></a></td>
+        <td><a href="./dashboard.php"><button class='btn btn-warning d-block m-auto' type="button">BACK</button></a></td>
 
     </fieldset>
 </body>

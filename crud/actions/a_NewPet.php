@@ -3,7 +3,7 @@ session_start();
 require_once '../components/db_connect.php';
 
 if (isset($_SESSION['user']) != "") {
-    header("Location:home.php");
+    header("Location:../User_Home/home.php");
     exit;
 }
 if (!isset($_SESSION['admin']) && !isset($_SESSION['user'])) {
@@ -37,7 +37,7 @@ if ($_POST) {
     }
     mysqli_close($connect);
 } else {
-    header("location: ../dashAddPet.php ");
+    header("location: ../Admin_Dash/dashAddPet.php ");
 }
 
 ?>

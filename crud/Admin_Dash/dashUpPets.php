@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'components/db_connect.php';
+require_once '../components/db_connect.php';
 // if session is not set this will redirect to login page
 if (!isset($_SESSION['admin']) && !isset($_SESSION['user'])) {
     header("Location: index.php");
@@ -8,7 +8,7 @@ if (!isset($_SESSION['admin']) && !isset($_SESSION['user'])) {
 }
 //if session user exist it shouldn't access dashboard.php
 if (isset($_SESSION["user"])) {
-    header("Location: home.php");
+    header("Location: ../User_Home/home.php");
     exit;
 }
 
@@ -46,8 +46,8 @@ mysqli_close($connect);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm-Dashboard-UpPet</title>
-    <?php require_once 'components/boot.php' ?>
-    <link rel="stylesheet" href="./style/styleDash.css">
+    <?php require_once '../components/boot.php' ?>
+    <link rel="stylesheet" href="../style/styleDash.css">
 </head>
 
 <body>

@@ -8,11 +8,11 @@ if (!isset($_SESSION['admin']) && !isset($_SESSION['user'])) {
 }
 //if it is a user it will create a back button to home.php
 if (isset($_SESSION["user"])) {
-    $backBtn = "home.php";
+    $backBtn = "User_Home/home.php";
 }
 //if it is a adm it will create a back button to dashboard.php
 if (isset($_SESSION["admin"])) {
-    $backBtn = "dashboard.php";
+    $backBtn = "Admin_Dash/dashboard.php";
 }
 
 //fetch and populate form

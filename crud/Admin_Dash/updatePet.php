@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once './components/db_connect.php';
+require_once '../components/db_connect.php';
 // if session is not set this will redirect to login page
 if (!isset($_SESSION['admin']) && !isset($_SESSION['user'])) {
     header("Location: index.php");
@@ -8,7 +8,7 @@ if (!isset($_SESSION['admin']) && !isset($_SESSION['user'])) {
 }
 //if it is a user it will create a back button to home.php
 if (isset($_SESSION["user"])) {
-    $backBtn = "home.php";
+    $backBtn = "../User_Home/home.php";
 }
 //if it is a adm it will create a back button to dashboard.php
 if (isset($_SESSION["admin"])) {
@@ -35,30 +35,6 @@ if (isset($_GET['id'])) {
     }
 }
 
-//update
-$class = 'd-none';
-if (isset($_POST["submit"])) {
-    $name = $_POST['name'];
-    $breed = $_POST['breed'];
-    $image = $_POST['image'];
-    $vaccinated = $_POST['vaccinated'];
-    $description = $_POST['description'];
-    $age = $_POST['age'];
-    $size = $_POST['size'];
-    $status = $_POST['status'];
-    $address = $_POST['address'];
-    $id=$_POST['id'];
-    $sql = "UPDATE animals SET description = '$description', size = '$size', age = '$age',vaccinated = '$vaccinated',breed = '$breed',status='$status', name = '$name',  image = '$image', address = '$address' WHERE animal_id = $id";
-    if (mysqli_query($connect, $sql) === true) {
-        $class = "alert alert-success";
-        $message = "The record was successfully updated";
-        header("refresh:3;url=updatePet.php?id={$id}");
-    } else {
-        $class = "alert alert-danger";
-        $message = "Error while updating record : <br>" . $connect->error;
-        header("refresh:3;url=updatePet.php?id={$id}");
-    }
-}
 
 mysqli_close($connect);
 ?>
@@ -70,8 +46,8 @@ mysqli_close($connect);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Pet</title>
-    <?php require_once 'components/boot.php' ?>
-    <link rel="stylesheet" href="./style/styleDash.css">
+    <?php require_once '../components/boot.php' ?>
+    <link rel="stylesheet" href="../style/styleDash.css">
 </head>
 
 <body>
@@ -82,7 +58,7 @@ mysqli_close($connect);
         </div>
         <h2>Change infos of  <?= $name?></h2>
         <img class='id' src='<?php echo $image ?>' alt="<?php echo $name ?>">
-        <form method="post" action="actions/a_UpPet.php" enctype="multipart/form-data">
+        <form method="post" action="../actions/a_UpPet.php" enctype="multipart/form-data">
         <table class='table myTable'>
                 <tr>
                     <th>Name</th>

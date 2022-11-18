@@ -61,8 +61,8 @@ if (mysqli_num_rows($resAnimal)  > 0) {
             <img class="col-4" id="profil" src="<?php echo $row['picture']; ?>" alt="<?php echo $row['first_name']; ?>">
             <p class=" col-8 m-auto">Hi <?php echo $row['first_name'] . " " . $row['last_name']."<br>
             ".$row['email']; ?></p>
-            <div id="btns"> <br><a class="btn btn-danger" href="logout.php?logout">Sign Out</a> <br>
-        <a class="btn btn-success" href="updateUser.php?id=<?php echo $_SESSION['user'] ?>">Update your profile</a></div>
+            <div id="btns"> <br><a class="btn btn-danger" href="../logout.php?logout">Sign Out</a> <br>
+        <a class="btn btn-success" href="../updateUser.php?id=<?php echo $_SESSION['user'] ?>">Update your profile</a></div>
         </div>
 
         <h1>Our animals</h1>
