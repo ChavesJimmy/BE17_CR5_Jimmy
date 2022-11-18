@@ -45,7 +45,7 @@ mysqli_close($connect);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet-Dashboard</title>
+    <title>Adm-Dashboard-UpPet</title>
     <?php require_once 'components/boot.php' ?>
     <link rel="stylesheet" href="./style/styleDash.css">
 </head>

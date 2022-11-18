@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'components/db_connect.php';
+require_once '../components/db_connect.php';
 
 // if adm will redirect to dashboard
 if (isset($_SESSION['admin'])) {
@@ -54,8 +54,8 @@ if (mysqli_num_rows($resAnimal)  > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junior</title>
-    <?php require_once 'components/boot.php' ?>
-    <link rel="stylesheet" href="./style/styleHome.css">
+    <?php require_once '../components/boot.php' ?>
+    <link rel="stylesheet" href="../style/styleHome.css">
 </head>
 
 <body>

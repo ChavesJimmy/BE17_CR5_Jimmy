@@ -4,7 +4,7 @@ require_once 'components/db_connect.php';
 
 // it will never let you open index (login) page if session is set
 if (isset($_SESSION['user']) != "") {
-    header("Location: home.php");
+    header("Location: User_Home/home.php");
     exit;
 }
 if (isset($_SESSION['admin']) != "") {
@@ -53,7 +53,7 @@ if (isset($_POST['btn-login'])) {
                 header("Location: dashboard.php");
             } else {
                 $_SESSION['user'] = $row['user_id'];
-                header("Location: home.php");
+                header("Location: User_Home/home.php");
             }
         } else {
             $errMSG = "Incorrect Credentials, Try again...";

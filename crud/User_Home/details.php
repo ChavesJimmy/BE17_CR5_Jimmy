@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require_once "./components/db_connect.php";
+require_once "../components/db_connect.php";
 //if it is a user it will create a back button to home.php
 if (isset($_SESSION["user"])) {
     $backBtn = "home.php";
@@ -72,14 +72,14 @@ else{$tbody = "<div class='card mb-3''>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <h1>Details about <?= $rowAnimal['name'] ?></h1>
-    <?php require_once "./components/boot.php" ?>
-    <link rel="stylesheet" href="./style/styleHome.css">
+    <?php require_once "../components/boot.php" ?>
+    <link rel="stylesheet" href="../style/styleHome.css">
     <title>Details</title>
 </head>
 <body>
     <?php echo $tbody ?>
     
-    <form method="post" action="./actions/a_Adopt.php" enctype="multipart/form-data">        
+    <form method="post" action="../actions/a_Adopt.php" enctype="multipart/form-data">        
                     <input type="hidden" name="fk_animal_id" value="<?php echo $id ?>"/><br>
                     <input type="hidden" name="fk_user_id" value="<?php echo $Userid?>"/><br>
                     <input type="hidden" name="id" value="<?php echo $id ?>" />

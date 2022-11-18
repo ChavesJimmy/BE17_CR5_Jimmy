@@ -65,7 +65,7 @@ mysqli_close($connect);
                 <h1>Menu</h1>
                 <a class="btn btn-success" href="dashUser.php">Manage Users</a><br>
                 <a class="btn btn-dark" href="dashAdoption.php">See Pet Adoptions</a><br>
-                <a class="btn btn-warning" href="dashNewPet.php">Add Pets</a><br>
+                <a class="btn btn-warning" href="dashAddPet.php">Add Pets</a><br>
                 <a class="btn btn-info" href="dashUpPets.php">Manage Pets</a><br>
 
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'components/db_connect.php';
+require_once '../components/db_connect.php';
 //if it is a user it will create a back button to home.php
 if (isset($_SESSION["user"])) {
     $backBtn = "home.php";
@@ -53,8 +53,8 @@ if (mysqli_num_rows($resAnimal)  > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senior</title>
-    <?php require_once 'components/boot.php' ?>
-    <link rel="stylesheet" href="./style/styleHome.css">
+    <?php require_once '../components/boot.php' ?>
+    <link rel="stylesheet" href="../style/styleHome.css">
 </head>
 
 <body>

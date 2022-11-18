@@ -33,11 +33,11 @@ if ($_POST) {
             </tr></table><hr>";
     } else {
         $class = "danger";
-        $message = "Error while creating record. Try again: <br>" . $connect->error;
+        $message = "Error while adding pet. Try again: <br>" . $connect->error;
     }
     mysqli_close($connect);
 } else {
-    header("location: ../error.php");
+    header("location: ../dashAddPet.php ");
 }
 
 ?>

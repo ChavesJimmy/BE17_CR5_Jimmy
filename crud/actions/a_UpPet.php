@@ -27,11 +27,11 @@ if ($_POST) {
     
     if (mysqli_query($connect, $sql) === true) {
         $class = "alert alert-success";
-        $message = "The record was successfully updated";
+        $message = "The pet was successfully updated";
         header("refresh:3;url=../updatePet.php?id={$id}");
     } else {
         $class = "alert alert-danger";
-        $message = "Error while updating record : <br>" . $connect->error;
+        $message = "Error while updating pet : <br>" . $connect->error;
         header("refresh:3;url=../updatePet.php?id={$id}");
     }
     mysqli_close($connect);
@@ -46,7 +46,7 @@ if ($_POST) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Add pet</title>
+    <title>Update pet</title>
     <?php require_once '../components/boot.php' ?>
 </head>
 
