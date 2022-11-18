@@ -1,0 +1,26 @@
+.container{
+    padding: 2rem;
+    text-align: center;
+    background-color: lightgrey;
+    margin-top: 2rem;
+    border: burlywood 2px solid;
+    border-radius: 25px;
+    font-weight: bold;
+
+}
+input{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+}
+form{
+    display: block;
+    margin: auto;
+}
+a{
+    border: solid;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 15px;
+}

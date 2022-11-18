@@ -1,0 +1,83 @@
+#profil{
+    border-radius: 25%;
+    display: block;
+    margin: auto;
+    width: 30%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: solid burlywood 2px;
+    padding: 0.5rem;
+}
+p,h1,h5{
+    font-weight: bold;
+    font-size: 150%;
+    margin: auto;
+    text-align: center;
+}
+li{
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+
+}
+.hero{
+    border-bottom: solid 2px burlywood;
+    padding-bottom: 1rem;
+}
+#btns{
+    display: flex;
+    flex-direction: column-reverse;
+    width:35% ;
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+a{
+    border-radius: 15px;
+}
+#btns2{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+    border-bottom: solid 2px burlywood;
+}
+#main{
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: lightgray;
+    border-radius: 15px;
+    border: solid burlywood 2px;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+#petcard{
+    width: 25rem;
+}
+#imgCard{
+    height: 13rem;
+    object-fit: cover;
+}
+/*style details*/
+.text{
+    width: 100%;
+}
+.card{
+    padding: 2rem;
+    margin: 2rem;
+}
+.btnback{
+    display: block;
+    margin: auto;
+    width: 25%;
+}
+.mywidth{
+    display: block;
+    width:43rem;
+    margin: auto;
+}
+h1{
+    font-size: 300%;
+}

@@ -1,0 +1,85 @@
+.admin{
+    background-color: lightgrey;
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: burlywood solid 2px;
+    border-radius: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+p{
+    font-weight: bold;
+}
+.Image{
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border: solid burlywood;
+    margin-top: 1rem;
+    border-radius: 15px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    background-color: lightgrey;
+    padding: 3rem;
+    border: burlywood solid 2px;
+    border-radius: 15px;
+}
+a{
+    width: 75%;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-bottom: solid 2px burlywood;
+}
+.button{
+    padding-top: 1rem;
+    display: block;
+    margin: auto;
+    padding-bottom: 2rem;
+    border-bottom: solid 2px burlywood
+;}
+.h2,th{
+    text-align: center;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 2rem;
+}
+th{
+    background-color: burlywood;
+    padding: 1rem;
+    font-size: 125%;
+    text-align: center;
+}
+.myTable{
+    border: burlywood solid 2px;
+    padding: 1rem;
+    background-color: lightgrey;
+    width: 100%;
+}
+.id{
+    width: 150px;
+    height: 100px;
+    border: burlywood 2px solid;
+    border-radius: 15px;
+    margin: 0.3rem;
+    object-fit: cover;
+}
+td{
+    padding: 0.3rem;
+    text-align: center;
+    font-weight: bold;
+    border-right: 1px solid burlywood;
+}
+::placeholder{
+    text-align: center;
+}
